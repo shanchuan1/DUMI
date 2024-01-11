@@ -1,0 +1,99 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe D:\NODE\node_global\node_modules\yarn\bin\yarn.js add gh-pages -D
+
+PATH: 
+  C:\Users\yongen\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\yongen\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\Git\cmd;D:\NVM\nvm;D:\NODE\node_global;D:\NODE\node_global\node_modules\yarn\bin;D:\微信开发者工具\微信web开发者工具\dll;C:\Program Files\Docker\Docker\resources\bin;C:\Users\yongen\AppData\Local\Microsoft\WindowsApps;C:\Users\yongen\AppData\Roaming\npm;C:\Users\yongen\AppData\Local\Programs\Microsoft VS Code\bin;D:\NVM\nvm;C:\Program Files\nodejs;D:\NODE\node_global;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.14.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\yongen\AppData\Local\Yarn\Cache\v6\npm-classnames-2.3.2-351d813bf0137fcc6a76a16b88208d2560a0d924-integrity\node_modules\classnames\bind.d.ts' -> 'D:\ShanChuan\DUMI\node_modules\dumi\node_modules\classnames\bind.d.ts'
+
+npm manifest: 
+  {
+    "name": "shanchuan",
+    "version": "0.0.1",
+    "description": "A react library developed with dumi",
+    "license": "MIT",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+      "dist"
+    ],
+    "scripts": {
+      "build": "father build",
+      "build:watch": "father dev",
+      "dev": "dumi dev",
+      "docs:build": "dumi build",
+      "doctor": "father doctor",
+      "lint": "npm run lint:es && npm run lint:css",
+      "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
+      "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
+      "prepare": "husky install && dumi setup",
+      "prepublishOnly": "father doctor && npm run build",
+      "start": "npm run dev",
+      "deploy": "gh-pages -d dist"
+    },
+    "commitlint": {
+      "extends": [
+        "@commitlint/config-conventional"
+      ]
+    },
+    "lint-staged": {
+      "*.{md,json}": [
+        "prettier --write --no-error-on-unmatched-pattern"
+      ],
+      "*.{css,less}": [
+        "stylelint --fix",
+        "prettier --write"
+      ],
+      "*.{js,jsx}": [
+        "eslint --fix",
+        "prettier --write"
+      ],
+      "*.{ts,tsx}": [
+        "eslint --fix",
+        "prettier --parser=typescript --write"
+      ]
+    },
+    "devDependencies": {
+      "@commitlint/cli": "^17.1.2",
+      "@commitlint/config-conventional": "^17.1.0",
+      "@types/react": "^18.0.0",
+      "@types/react-dom": "^18.0.0",
+      "@umijs/lint": "^4.0.0",
+      "dumi": "^2.2.13",
+      "eslint": "^8.23.0",
+      "father": "^4.1.0",
+      "gh-pages": "^6.1.1",
+      "husky": "^8.0.1",
+      "lint-staged": "^13.0.3",
+      "prettier": "^2.7.1",
+      "prettier-plugin-organize-imports": "^3.0.0",
+      "prettier-plugin-packagejson": "^2.2.18",
+      "react": "^18.0.0",
+      "react-dom": "^18.0.0",
+      "stylelint": "^14.9.1"
+    },
+    "peerDependencies": {
+      "react": ">=16.9.0",
+      "react-dom": ">=16.9.0"
+    },
+    "publishConfig": {
+      "access": "public"
+    },
+    "authors": []
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
